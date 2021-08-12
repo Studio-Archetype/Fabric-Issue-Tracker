@@ -1,0 +1,113 @@
+name: Bug Report
+description: Report a issue with the functionality of shutter.
+title: "[Bug]: "
+labels: ["bug"]
+assignees:
+  - Vatuu
+
+body:
+  - type: markdown
+    attributes:
+      value: "# Create a Bug Report for Shutter"
+  - type: markdown
+    attributes:
+      value: "## Please take your time and provide us with as much information as you can."
+  - type: dropdown
+    id: mc-version
+    attributes:
+      label: Minecraft Version
+      description: What Minecraft version were you using when the issue occured?
+      options:
+        - 1.16.x
+        - 1.17.x
+    validations:
+      required: true
+  - type: dropdown
+    id: shutter-version
+    attributes:
+      label: Shutter Version
+      description: What version of Shutter were you using when the issue occured?
+      options:
+        - 2.0
+        - 1.1
+        - 1.0
+        - Beta Builds
+        - Alpha Builds
+    validations:
+      required: true
+  - type: input
+    id: build-version
+    attributes:
+      label: Shutter Build
+      description: What build of shutter is affected?
+      placeholder: Found by using '/shutter version'.
+    validations:
+      required: true
+      
+  - type: input
+    id: loader-version
+    attributes:
+      label: Fabric Loader Version
+      description: What version of Fabric Loader were you using when the issue occured?
+    validations:
+      required: true
+  - type: input
+    id: api-version
+    attributes:
+      label: Fabric API Version
+      description: What version of the Fabric API were you using when the issue occured?
+    validations:
+      required: true
+  - type: dropdown
+    id: render-engine
+    attributes:
+      label: Render Engine
+      description: If applicable, what render engine were you using?
+      options:
+        - Optifine/Optifabric
+        - FocalEngine
+  - type: input
+    id: engine-version
+    attributes:
+      label: Render Engine Version
+      description: If applicable, what version was the render engine you were using when the issue occured?
+      placeholder: When using Optifine/Optifabric, please provide both versions.
+      
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce
+      description: What did you do to trigger the issue? Please provide a steb-by-step walkthrough.
+    validations:
+      required: true
+  - type: textarea
+    id: desc
+    attributes:
+      label: Issue Description
+      description: What exactly is the issue? Please explain the problem in detail.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What was supposed to happen?
+      
+  - type: input
+    id: media
+    attributes:
+      label: Recording/Image of issue
+      description: If applicable, provide a link to media showcasing the issue.
+      placeholder: Ex. https://i.imgur.com/
+  - type: input
+    id: game-log
+    attributes:
+      label: Minecraft Log
+      description: If applicable, please provide the (crash)log of Minecraft.
+      placeholder: Use https://paste.bytecode.ninja/
+  - type: input
+    id: ffmpeg-log
+    attributes:
+      label: FFMPEG Log
+      description: If applicable, please provide the log of FFMPEG, found at .minecraft/shutter/recordings/<YourRecording>.
+      placeholder: Use https://paste.bytecode.ninja/
